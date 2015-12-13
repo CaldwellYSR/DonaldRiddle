@@ -1,10 +1,19 @@
 {
   "manifest_version": 2,
   "name": "Donald Marvolo Riddle",
-  "version": "0.20",
+  "version": "0.30",
 
   "description": "Find all instances of Donald Trump and replace it with his true name",
   "author": "Matthew Caldwell",
+
+  "permissions": [
+    "storage"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
 
   "content_scripts": [{
     "matches": ["<all_urls>"],
