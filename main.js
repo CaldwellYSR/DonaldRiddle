@@ -18,6 +18,6 @@ var keys = [
 var name = values[getRandomInt(0, values.length-1)];
 var i, regex;
 for( i = 0; i < keys.length; i++) {
-  regex = new Regexp(keys[i], "g");
+  regex = new RegExp(keys[i], "g");
   document.body.innerHTML = document.body.innerHTML.replace(regex, name);
 }
