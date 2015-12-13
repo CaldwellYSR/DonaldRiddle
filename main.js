@@ -19,5 +19,6 @@ var name = values[getRandomInt(0, values.length-1)];
 var i, regex;
 for( i = 0; i < keys.length; i++) {
   regex = new RegExp(keys[i], "g");
+  document.title = document.title.replace(regex, name);
   document.body.innerHTML = document.body.innerHTML.replace(regex, name);
 }
