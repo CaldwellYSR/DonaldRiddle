@@ -1,27 +1,23 @@
-var options = [ "He Who Must Not Be Named", "You Know Who", "Voldemort", "Tom Riddle", "Hitler" ]
-
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var name = options[getRandomInt(0, options.length-1)];
-var donald_trump = "Donald Trump", dt = new RegExp(donald_trump, "g");
-document.body.innerHTML = document.body.innerHTML.replace(dt, name);
-donald_trump = "Donald John Trump", dt = new RegExp(donald_trump, "g");
-document.body.innerHTML = document.body.innerHTML.replace(dt, name);
-donald_trump = "Donald J Trump", dt = new RegExp(donald_trump, "g");
-document.body.innerHTML = document.body.innerHTML.replace(dt, name);
-donald_trump = "Donald J. Trump", dt = new RegExp(donald_trump, "g");
-document.body.innerHTML = document.body.innerHTML.replace(dt, name);
-donald_trump = "donald trump", dt = new RegExp(donald_trump, "g");
-document.body.innerHTML = document.body.innerHTML.replace(dt, name);
-donald_trump = "donald j trump", dt = new RegExp(donald_trump, "g");
-document.body.innerHTML = document.body.innerHTML.replace(dt, name);
-donald_trump = "donald j. trump", dt = new RegExp(donald_trump, "g");
-document.body.innerHTML = document.body.innerHTML.replace(dt, name);
-donald_trump = "donald john trump", dt = new RegExp(donald_trump, "g");
-document.body.innerHTML = document.body.innerHTML.replace(dt, name);
-donald_trump = "trump", dt = new RegExp(donald_trump, "g");
-document.body.innerHTML = document.body.innerHTML.replace(dt, name);
-donald_trump = "Trump", dt = new RegExp(donald_trump, "g");
-document.body.innerHTML = document.body.innerHTML.replace(dt, name);
+// TODO Key Value JSON object made from browser action form.
+var values = [ "He Who Must Not Be Named", "You Know Who", "Voldemort", "Tom Riddle", "Hitler" ]
+var keys = [
+  "Donald Trump",
+  "Donald John Trump",
+  "Donald J Trump",
+  "Donald J. Trump",
+  "donald trump",
+  "donald j trump",
+  "donald j. trump",
+  "donald john trump",
+  "DONALD TRUMP"
+];
+var name = values[getRandomInt(0, values.length-1)];
+var i, regex;
+for( i = 0; i < keys.length; i++) {
+  regex = new RegExp(keys[i], "g");
+  document.body.innerHTML = document.body.innerHTML.replace(regex, name);
+}
