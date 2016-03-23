@@ -3,22 +3,45 @@ function getRandomInt(min, max) {
 }
 
 // TODO Key Value JSON object made from browser action form.
-var values = [ "He Who Must Not Be Named", "You Know Who", "Voldemort", "Tom Riddle", "Hitler" ]
+var values = [
+    "debate",
+    "poll",
+    "candidate",
+    "drone",
+    "vows to",
+    "at large",
+    "successfully",
+    "expands",
+    "an unknown number",
+    "front runner",
+    "global",
+    "years",
+    "minutes",
+    "no indication",
+    "urged restraint by",
+    "horsepower"
+]
 var keys = [
-  "Donald Trump",
-  "Donald John Trump",
-  "Donald J Trump",
-  "Donald J. Trump",
-  "donald trump",
-  "donald j trump",
-  "donald j. trump",
-  "donald john trump",
-  "DONALD TRUMP"
+    "dance off",
+    "psychic reading",
+    "airbender",
+    "dog",
+    "probably wont",
+    "very large",
+    "suddenly",
+    "physically expands",
+    "like hundreds",
+    "blade runner",
+    "spherical",
+    "minutes",
+    "years",
+    "lots of signs",
+    "drunkenly egged on",
+    "tons of horsemeat"
 ];
-var name = values[getRandomInt(0, values.length-1)];
 var i, regex;
 for( i = 0; i < keys.length; i++) {
   regex = new RegExp(keys[i], "g");
-  document.title = document.title.replace(regex, name);
-  document.body.innerHTML = document.body.innerHTML.replace(regex, name);
+  document.title = document.title.replace(regex, values[i]);
+  document.body.innerHTML = document.body.innerHTML.replace(regex, values[i]);
 }
